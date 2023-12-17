@@ -32,7 +32,10 @@ struct HikeView: View {
                         .labelStyle(.iconOnly)
                         .imageScale(.large)
                         .rotationEffect(.degrees(showDetail ? 90 : 0))
+                        .scaleEffect(showDetail ? 1.5 : 1)
                         .padding()
+                    // at the end of the section 2 tutorial wants us to remove animation, however I liked it so much that I'm not going to remove
+                        .animation(.spring(bounce: 0.5), value: showDetail)
                 }
             }
 
