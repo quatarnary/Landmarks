@@ -26,7 +26,9 @@ struct HikeView: View {
                 Spacer()
 
                 Button {
-                    showDetail.toggle()
+                    withAnimation {
+                        showDetail.toggle()
+                    }
                 } label: {
                     Label("Graph", systemImage: "chevron.right.circle")
                         .labelStyle(.iconOnly)
@@ -35,7 +37,8 @@ struct HikeView: View {
                         .scaleEffect(showDetail ? 1.5 : 1)
                         .padding()
                     // at the end of the section 2 tutorial wants us to remove animation, however I liked it so much that I'm not going to remove
-                        .animation(.spring(bounce: 0.5), value: showDetail)
+                    // it is because we are going to add animation for all changes so I commented this animation for section-3
+//                        .animation(.spring(bounce: 0.5), value: showDetail)
                 }
             }
 
