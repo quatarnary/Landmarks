@@ -2,7 +2,7 @@
 //  CategoryHome.swift
 //  Landmarks
 //
-//  Created by Bugra Aslan on 18.12.2023.
+//  Created by Bugra Aslan on 19.12.2023.
 //
 
 import SwiftUI
@@ -10,14 +10,13 @@ import SwiftUI
 struct CategoryHome: View {
     var body: some View {
         NavigationSplitView {
-            Text("Hello, World!")
+            Text("Hello, World")
                 .navigationTitle("Featured")
         } detail: {
             Text("Select a Landmark")
         }
     }
 }
-
 
 #Preview {
     CategoryHome()
