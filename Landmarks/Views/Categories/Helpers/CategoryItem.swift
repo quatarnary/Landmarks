@@ -19,6 +19,7 @@ struct CategoryItem: View {
             Text(landmark.name)
                 .font(.caption)
         }
+        // I don't think putting .padding with .leading here is a good idea. Because we can use spacing
         .padding(.leading, 15)
     }
 }

@@ -19,7 +19,7 @@ struct CategoryRow: View {
                 .padding(.top, 5)
             
             // ScrollView(.horizontal, showsIndicators: true) {
-            ScrollView(.horizontal, showsIndicators: true) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(items) { landmark in
                         CategoryItem(landmark: landmark)
@@ -28,8 +28,8 @@ struct CategoryRow: View {
                 // .padding(.bottom, 5)
                 // if we want to use indicators we can just add a 5 point padding which solves the indicator being over the text :3
             }
+            .frame(height: 185)
         }
-        .frame(height: 185)
         // .background(.gray)
         // for checking the frame size and other stuff, just for debug
     }
