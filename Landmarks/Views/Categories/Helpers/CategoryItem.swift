@@ -13,10 +13,12 @@ struct CategoryItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             landmark.image
+                .renderingMode(.original)
                 .resizable()
                 .frame(width: 155, height: 155)
                 .clipShape(.rect(cornerRadius: 5.0))
             Text(landmark.name)
+                .foregroundStyle(.primary)
                 .font(.caption)
         }
         // I don't think putting .padding with .leading here is a good idea. Because we can use spacing
